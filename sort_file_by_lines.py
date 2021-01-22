@@ -75,7 +75,7 @@ if __name__ == "__main__":
         "-s", "--chunk-size",
         help="Chunk size", type=int, default=1000
     )
-    parser.add_argument("-f", "--filename", help="File to sort")
+    parser.add_argument("-f", "--filename", help="File to sort", required=True)
     args = parser.parse_args()
     name, ext = args.filename.rsplit('.', maxsplit=1)
     sort(
